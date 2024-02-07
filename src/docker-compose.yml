@@ -26,9 +26,8 @@ services:
         volumes:
             - .:/infra
         environment:
-            - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
-            - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-            - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
+            - AWS_ACCESS_KEY_ID=AKIAU6GDZGRDMWAZ6WMF
+            - AWS_SECRET_ACCESS_KEY=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
 
 
 networks:
