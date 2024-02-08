@@ -10,8 +10,6 @@ jobs:
 
   build:
 
-    runs-on: self-hosted
-
     steps:
     - name: Pull docker image
       run: sudo docker pull ${{ secrets.DOCKER_HUB_USER }}/sessions-project:githubactions
