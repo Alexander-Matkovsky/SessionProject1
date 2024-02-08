@@ -9,7 +9,7 @@
 # 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/ubuntu/reclone_shell/reclone_project_and_docker_compose.sh >> /home/ubuntu/cron.log 2>&1
 
 # make sure to execute the following commands manually on the first time:
-# git clone git@github.com:JonathanYK/Sessions_Project.git
+# git clone git@github.com:Alexander-Matkovsky/SessionsProject1.git
 # mkdir -p /home/ubuntu/reclone_shell
 # cp Sessions_Project/reclone_project_and_docker_compose.sh /home/ubuntu/reclone_shell
 # chmod +x reclone_shell/reclone_project_and_docker_compose.sh
@@ -22,22 +22,22 @@ date -u
 echo "------------------"
 
 echo "entring main path"
-cd /home/ubuntu
+cd 
 
 echo "compose down"
-sudo docker-compose -f ~/Sessions_Project/src/docker-compose.yml down
+sudo docker-compose down
 
 echo "removing old clone"
-rm -rf Sessions_Project/
+rm -rf SessionProject1/
 
-echo "cloning ssh from JonathanYK/Sessions_Project.git"
-git clone git@github.com:JonathanYK/Sessions_Project.git
+echo "cloning ssh from Alexander-Matkovsky/SessionProject1.git"
+git clone git@github.com:Alexander-Matkovsky/SessionProject1.git
 
 echo "create dedicated dir for reclone_project_and_docker_compose.sh"
-mkdir -p /home/ubuntu/reclone_shell
+mkdir -p reclone_shell
 
-echo "copy reclone_project_and_docker_compose.sh to /home/ubuntu/reclone_shell"
-cp Sessions_Project/reclone_project_and_docker_compose.sh /home/ubuntu/reclone_shell
+echo "copy reclone_project_and_docker_compose.sh to reclone_shell"
+cp SessionProject1/reclone_project_and_docker_compose.sh ./reclone_shell/SessionProject1/reclone_project_and_docker_compose.sh
 
 echo "provide permissions to reclone_shell/reclone_project_and_docker_compose.sh"
 chmod +x reclone_shell/reclone_project_and_docker_compose.sh
