@@ -43,7 +43,7 @@ echo "provide permissions to reclone_shell/reclone_project_and_docker_compose.sh
 chmod +x reclone_shell/reclone_project_and_docker_compose.sh
  
 echo "entering cloned project"
-cd ./Sessions_Project/src
+cd ./SessionProject1/src
 
 echo "compose up"
 sudo docker-compose up -d
