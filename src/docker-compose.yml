@@ -22,12 +22,15 @@ services:
             - backend
 
     tf:
-        image: hashicorp/terraform:1.1.7
+        image: hashicorp/terraform:1.7
         volumes:
             - .:/infra
+        working_dir: /infra
         environment:
-            - AWS_ACCESS_KEY_ID=AKIAU6GDZGRDMWAZ6WMF
-            - AWS_SECRET_ACCESS_KEY=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
+            - AWS_ACCESS_KEY_ID=AKIAU6GDZGRDDL6SGDWO
+            - AWS_SECRET_ACCESS_KEY=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
+              #- command: ["tail", "-f", "/dev/null"]
+
 
 
 networks:
